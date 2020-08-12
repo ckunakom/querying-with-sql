@@ -54,3 +54,9 @@ SELECT last_name, COUNT(last_name) AS "Frequency Count of Last Name"
 FROM employee
 GROUP BY last_name
 ORDER BY "Frequency Count of Last Name" DESC;
+
+-- EPILOGUE
+SELECT * FROM employee_dept e JOIN
+salaries s ON e.emp_no = s.emp_no
+WHERE e.emp_no = 499942;
+-- Can I ask my boss to increase my salary o_O?
