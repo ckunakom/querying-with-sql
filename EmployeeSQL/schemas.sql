@@ -63,6 +63,10 @@ REFERENCES employee (emp_no);
 ALTER TABLE salaries ADD CONSTRAINT fk_salaries_emp_no FOREIGN KEY(emp_no)
 REFERENCES employee (emp_no);
 
+ALTER TABLE salaries ADD PRIMARY KEY (emp_no);
+ALTER TABLE dept_manager ADD PRIMARY KEY (emp_no, dept_no);
+ALTER TABLE dept_emp ADD PRIMARY KEY (emp_no, dept_no);
+
 SELECT * FROM employee;
 SELECT * FROM departments;
 SELECT * FROM dept_emp;
